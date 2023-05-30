@@ -15,7 +15,6 @@ const Modal = ({handleModal, saveData, newBgImage, clearbgImage}) => {
                 newBgImage( reader.result )
             } else{
                 setImagenValue(reader.result)
-                
             }
         }
 
@@ -34,7 +33,7 @@ const Modal = ({handleModal, saveData, newBgImage, clearbgImage}) => {
         <div className='modalContent'>
             <div className='bgImageContent'>
                 <label htmlFor="precio">Imagen de fondo</label>
-                <input type='file' onChange={(e)=>onImgChange(e, 'bg')}/>
+                <input type='file' accept="image/*" onChange={(e)=>onImgChange(e, 'bg')}/>
                 <button onClick={clearbgImage}>Borrar Imagen</button>
             </div>
             <div className='menuDataContent'>
@@ -44,7 +43,7 @@ const Modal = ({handleModal, saveData, newBgImage, clearbgImage}) => {
                 </div>
                 <div>
                     <label htmlFor="imagen">Imagen:</label>
-                    <input type='file' name='imagen' onChange={(e)=>onImgChange(e, 'menu')}/>
+                    <input type='file' name='imagen' accept="image/*" onChange={(e)=>onImgChange(e, 'menu')}/>
                 </div>
                 <div>
                     <label htmlFor="">Descripcion:</label>
